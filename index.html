@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/reset.min.css" />
+    <link rel="stylesheet" href="src/style.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <h1>Invoice Generator</h1>
+
+      <form action="">
+        <div class="row">
+          <div class="col-5">
+            <div class="logo">
+              <div class="logo-remove">
+                <i class="icon icon-close"></i>
+              </div>
+              <label>
+                <span>
+                  <i class="icon icon-plus"></i>
+                  Add your logo
+                </span>
+                <input type="file" name="logo" id="logo" accept="image/*" onchange="previewFile()"/>
+                <img src="" id="logo-img" />
+              </label>
+              
+            </div>
+            <label>
+              From *
+              <textarea name="invoice-from" id="invoiceFrom" required placeholder="Who is this invoice from?"></textarea>
+            </label>
+            <label>
+              To *
+              <textarea name="invoice-to" id="invoiceTo" required placeholder="Who is this invoice to?"></textarea>
+            </label>
+          </div>
+          <div class="col-5">
+            <div class="about">
+              <label>
+                <input class="about__name" type="text" name="invoice-name" id="invoiceName" value="Invoice">
+              </label>
+              <div class="row about__row">
+                <div class="col-6">
+                </div>
+                <div class="col-6">
+                  <div class="about__number">
+                    <span>#</span><input type="text" name="invoice-number" id="Number" value="1">
+                  </div>
+                </div>
+              </div>
+              <div class="row about__row">
+                <div class="col-6">
+                  <p>Date</p>
+                </div>
+                <div class="col-6">
+                  <input type="date" name="date" id="date">
+                </div>
+              </div>
+              <div class="row about__row">
+                <div class="col-6">
+                  <p>Payment Terms</p>
+                </div>
+                <div class="col-6">
+                  <input type="text" name="payment-terms" id="paymentTerms">
+                </div>
+              </div>
+              <div class="row about__row">
+                <div class="col-6">
+                  <p>Due Date</p>
+                </div>
+                <div class="col-6">
+                  <input type="date" name="due-date" id="dueDate">
+                </div>
+              </div>
+            </div> 
+            <div class="balance row">
+              <div class="col-6">
+                Balance
+              </div>
+              <div class="col-6 balance__total">
+                <span class="note">$</span>
+                <span id="totalBalance">00.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+      </form>
+    </div>
+    <script src="src/js/main.js"></script>
+  </body>
+</html>
