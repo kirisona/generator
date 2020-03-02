@@ -2,6 +2,10 @@
 @import "../components/grid.scss";
 @import "../components/variables.scss";
 
+* {
+  box-sizing: border-box;
+}
+
 .main {
   max-width: 830px;
   padding: 15px;
@@ -129,5 +133,68 @@ form {
   &__total {
     display: flex;
     justify-content: space-between;
+  }
+}
+
+// positions
+
+.positions {
+  margin-top: 15px;
+
+  &__title {
+    background: $black;
+    color: $white;
+    border-radius: 5px;
+    margin-bottom: 5px;
+
+    div {
+      padding: 5px 10px;
+    }
+  }
+
+  .removeItem {
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__item {
+    padding-bottom: 5px;
+    input {
+      width: 99%;
+      padding: 5px 10px;
+      border-radius: 5px;
+      box-shadow: none;
+      background: none;
+    }
+
+    &:hover {
+      .removeItem {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__btn {
+    padding: 10px 15px;
+    background: blue;
+    color: $white;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s ease-in;
+
+    &:hover {
+      background: rgb(3, 3, 78);
+    }
+  }
+
+  &__price {
+    display: flex;
+    input {
+      border: none;
+      background: none;
+      text-align: right;
+      margin-left: 10px;
+    }
+
   }
 }

@@ -93,7 +93,45 @@
           </div>
         </div>
 
-        
+        <div class="positions">
+          <div class="row positions__title">
+            <div class="col-6">
+              Item
+            </div>
+            <div class="col-2">
+              Quantity
+            </div>
+            <div class="col-2">
+              Rate
+            </div>
+            <div class="col-2">
+              Amount
+            </div>
+          </div>
+          <div class="row positions__item">
+            <div class="col-6">
+              <input type="text" name="workName" placeholder="Description of service or product..." class="workName">
+            </div>
+            <div class="col-2">
+              <input type="number" placeholder="Quantity" name="quantity" class="quantity">
+            </div>
+            <div class="col-2 positions__price">
+              <span class="note">$</span>
+              <input type="number" name="price" class="price" placeholder="Price">
+            </div>
+            <div class="col-2 row positions__amount">
+              <span class="note">$</span>
+              <span class="amount">00.00</span>
+              <span class="removeItem">
+                <i class="icon icon-close"></i>
+              </span>
+            </div>
+          </div>
+          <button class="positions__btn" id="addLine">
+            <i class="icon icon-plus"></i>
+            Line item
+          </button>
+        </div>
       </form>
     </div>
     <script src="src/js/main.js"></script>
